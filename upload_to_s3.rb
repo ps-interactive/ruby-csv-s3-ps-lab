@@ -6,11 +6,11 @@ s3 = Aws::S3::Client.new(
 
 bucket_name = ""
 
-resp = s3.create_bucket({
+s3.create_bucket({
   bucket: bucket_name
 })
 
-resp = s3.put_object({
+s3.put_object({
   acl: "",
   key: "winners.csv",
   bucket: bucket_name,
